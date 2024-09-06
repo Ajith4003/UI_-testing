@@ -9,13 +9,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class Testscript implements Propertes{
-
+	
+	/* i create the three class
+	 * Testscripet- i write the TestCase
+	 * Properties - this is a interface class i store the liks-url-delay time -Dimensions
+	 * Screenshot - hare   write  Screenshot program and location  */
+           
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		String[] urls = (links);
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.getcalley.com/page-sitemap.xml");
+		driver.get(url);
 		Thread.sleep(time);
 
 		//Dimension change(1920, 1080) 
@@ -71,7 +76,7 @@ public class Testscript implements Propertes{
 		//firefox driver is start to running  
 
 		WebDriver driver1= new FirefoxDriver();
-		driver1.get("https://www.getcalley.com/page-sitemap.xml"); 
+		driver1.get(url); 
 		Thread.sleep(2000);
 		
 		//Dimension change(1920, 1080)
@@ -120,7 +125,7 @@ public class Testscript implements Propertes{
 		//EdgeDriver is  start  to running
 
 		WebDriver driver2= new EdgeDriver();
-		driver2.get("https://www.getcalley.com/page-sitemap.xml");
+		driver2.get(url);
 		//Dimension change(1920, 1080)
 		for (String url1 : urls) {
 			driver2.manage().window().setSize(d1);
